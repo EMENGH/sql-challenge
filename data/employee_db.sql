@@ -10,12 +10,12 @@ CREATE TABLE "titles" (
         "title_id"
      )
 );
-select * from titles;
+
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
     "salary" INT   NOT NULL
 );
-select * from salaries;
+
 CREATE TABLE "employees" (
     "emp_no" INT   NOT NULL,
     "emp_title_id" VARCHAR(255)   NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE "employees" (
         "emp_no"
      )
 );
-select count (*) from employees;
+
 CREATE TABLE "departments" (
     "dept_no" VARCHAR(255)   NOT NULL,
     "dept_name" VARCHAR(255)   NOT NULL,
@@ -36,17 +36,17 @@ CREATE TABLE "departments" (
         "dept_no"
      )
 );
-select * from departments;
+
 CREATE TABLE "dept_emp" (
     "emp_no" INT   NOT NULL,
     "dept_no" VARCHAR(255)   NOT NULL
 );
-select * from dept_emp;
+
 CREATE TABLE "dept_manager" (
     "dept_no" VARCHAR(255)   NOT NULL,
     "emp_no" INT   NOT NULL
 );
-select count(*) from dept_manager;
+
 
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
